@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'appsettings/css/style.css' %}">
+    {% block links %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <a href="{% url 'Authorization_Registration' %}">Auth</a>
+        <a href="{% url 'Contact_page' %}">Contact</a>
+        <a href="{% url 'Main_page' %}">Main</a>
+        <a href="{% url 'Product_page' %}">Product</a>
+        <a href="{% url 'Shopping_cart_page' %}">Cart</a>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

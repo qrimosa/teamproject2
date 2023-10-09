@@ -1,0 +1,31 @@
+.page{
+    color: orange;
+    font-size: 40px;
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+.page:hover{
+    color:red;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(128, 199, 221);
+}
+main{
+    min-height: 900px;
+}
+footer{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background-color: grey;
+    min-width: 100%;
+}
