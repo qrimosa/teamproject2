@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Inria Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.container div{
+    text-align: center;
+    border: solid 2px rgb(207, 216, 218);
+    border-radius: 10px;
+    margin: 20px;
+    text-decoration: none;
+}

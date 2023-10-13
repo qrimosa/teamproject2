@@ -1,1 +1,21 @@
 {% extends 'appsettings/base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'Product_page/css/style.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="apple">
+        <a href="{% url 'apple' %}"><img height="250" width="250" style="border-radius: 50%;" src="{% static 'Product_page/img/apple.jpg' %}" alt=""></a>
+    </div>
+    <div class="xiaomi">
+        <a href="{% url 'xiaomi' %}"><img height="250" width="250" style="border-radius: 50%;" src="{% static 'Product_page/img/xiaomi.png' %}" alt=""></a>
+    </div>
+    <div class="samsung">
+        <a href="{% url 'samsung' %}"><img height="250" width="250" style="border-radius: 50%;" src="{% static 'Product_page/img/samsung.png' %}" alt=""></a>
+    </div>
+    <div class="pixel">
+        <a href="{% url 'pixel' %}"><img height="250" width="250" style="border-radius: 50%;" src="{% static 'Product_page/img/pixel.png' %}" alt=""></a>
+    </div>
+</div>
+{% endblock %}

@@ -26,7 +26,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', Authorization_Registration_views.Authorization_Registration, name= 'Authorization_Registration'),
     path('contacts/', Contact_page_views.contact_page, name ='Contact_page'),
-    path('main/', Main_page_views.main_page, name='Main_page'),
+    path('', Main_page_views.main_page, name='Main_page'),
     path('product/',Product_page_views.product_page, name='Product_page'),
-    path('cart/',Shopping_cart_page_views.Shopping_cart_page, name="Shopping_cart_page")
+    path('cart/',Shopping_cart_page_views.Shopping_cart_page, name="Shopping_cart_page"),
+    path('product/apple',Product_page_views.apple, name='apple'),
+    path('product/xiaomi',Product_page_views.xiaomi, name='xiaomi'),
+    path('product/samsung',Product_page_views.samsung, name='samsung'),
+    path('product/pixel',Product_page_views.pixel, name='pixel'),
 ]
