@@ -1,0 +1,28 @@
+{% extends 'appsettings/base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Inria+Sans:wght@700&family=Open+Sans:ital,wght@0,500;1,400&family=PT+Sans+Narrow&family=Roboto:wght@500&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div>
+        {% block blockone %}
+        {% endblock %}
+    </div>
+    <div>
+        {% block blocktwo %}
+        {% endblock %}
+    </div>
+    <div>
+        {% block blockthree %}
+        {% endblock %}
+    </div>
+    <div>
+        {% block blockfour %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -11,18 +11,29 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'Authorization_Registration' %}">Auth</a>
-        <a href="{% url 'Contact_page' %}">Contact</a>
         <a href="{% url 'Main_page' %}">Main</a>
         <a href="{% url 'Product_page' %}">Product</a>
         <a href="{% url 'Shopping_cart_page' %}">Cart</a>
+        <a href="{% url 'Contact_page' %}">Contact</a>
+        <a class = 'button' href="{% url 'Authorization_Registration' %}">Sign in</a>
     </header>
     <main>
         {% block content %}
         {% endblock %}
     </main>
     <footer>
-
+        <h2>
+            Якщо виникли питання телефонуйте на:
+        </h2> 
+        <p class = 'footerp'>
+            +380500849720
+        </p>
+        <p class = 'footerp'>
+            +380935023997
+        </p>
+        <p class = 'footerp'>
+            +380932323144
+        </p>
     </footer>
 </body>
 </html>

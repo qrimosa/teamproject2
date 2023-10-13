@@ -1,0 +1,12 @@
+.container div {
+    padding: 50px;
+}
+
+
+.container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
