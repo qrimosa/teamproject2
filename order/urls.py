@@ -22,6 +22,7 @@ import Main_page.views as Main_page_views
 import Product_page.views as Product_page_views
 import Shopping_cart_page.views as Shopping_cart_page_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', Authorization_Registration_views.Authorization_Registration, name= 'Authorization_Registration'),
@@ -33,4 +34,6 @@ urlpatterns = [
     path('product/xiaomi',Product_page_views.xiaomi, name='xiaomi'),
     path('product/samsung',Product_page_views.samsung, name='samsung'),
     path('product/pixel',Product_page_views.pixel, name='pixel'),
+    path('auth/registration', Authorization_Registration_views.Registration, name = 'Registration'),
+    path('auth/authorization', Authorization_Registration_views.Authorization, name = 'Authorization'),
 ]
