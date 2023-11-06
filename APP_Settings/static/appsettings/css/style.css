@@ -56,6 +56,7 @@ header a:hover{
 .button:hover{
     background-color: rgb(61, 108, 238);
     color: white;
+    box-shadow: 5px;
 }
 .logo{
     height: 100%;
