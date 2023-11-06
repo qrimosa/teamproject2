@@ -73,3 +73,7 @@ input:focus {
     display: flex;
     gap:5px;
 }
+.error p{
+    color: red;
+    font-size: 20px;
+}
