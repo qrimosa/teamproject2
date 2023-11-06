@@ -24,7 +24,7 @@ def Registration(request):
             if len(password) >= 8:
                 if password == confirm_password:
                     try:
-                        User.objects.create(username=login, password=password, email=email)
+                        User.objects.create_user(username = login, email = email, password = password)
                         return redirect('Authorization')
                     except IntegrityError:
                         context['error'] = 'Такий користувач вже існує!'
@@ -38,11 +38,13 @@ def Registration(request):
 
 def Authorization(request):
     context = {}
+    print(request.user.is_authenticated)
     if request.user.is_authenticated:
         context['error'] = 'Ти вже авторизувався'
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
+        context['username'] = username
         if username and password:
             user = authenticate(username = username, password = password)
             print(user)
