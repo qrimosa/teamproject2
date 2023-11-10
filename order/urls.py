@@ -21,6 +21,7 @@ import Contact_page.views as Contact_page_views
 import Main_page.views as Main_page_views
 import Product_page.views as Product_page_views
 import Shopping_cart_page.views as Shopping_cart_page_views
+from Authorization_Registration.views import log_out
 
 
 urlpatterns = [
@@ -36,4 +37,5 @@ urlpatterns = [
     path('product/pixel',Product_page_views.pixel, name='pixel'),
     path('auth/registration', Authorization_Registration_views.Registration, name = 'Registration'),
     path('auth/authorization', Authorization_Registration_views.Authorization, name = 'Authorization'),
+    path('auth/authorization', log_out, name='logout')
 ]
