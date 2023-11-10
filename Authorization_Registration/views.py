@@ -18,8 +18,7 @@ def Registration(request):
         context['email'] = email
         context['login'] = login
         context['password']  = password
-        context['confirm_password'] = confirm_password 
-           
+        context['confirm_password'] = confirm_password
         if login and password and email and confirm_password and checkbox:
             if len(password) >= 8:
                 if password == confirm_password:
@@ -38,7 +37,7 @@ def Registration(request):
 
 def Authorization(request):
     context = {}
-    print(request.user.is_authenticated)
+    
     if request.user.is_authenticated:
         context['error'] = 'Ти вже авторизувався'
     if request.method == 'POST':
@@ -55,6 +54,11 @@ def Authorization(request):
         else:
             context['error'] = 'Заповніть всі поля'
     return render(request, 'Authorization_Registration/authorization.html', context)
+
+def log_out(request):
+    logout(request)
+    return redirect('Authorization')
+
 
 
     
