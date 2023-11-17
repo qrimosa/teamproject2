@@ -49,6 +49,7 @@ def Authorization(request):
             print(user)
             if user:
                 login(request, user)
+                return redirect('profile')
             else:
                 context['error'] = 'Логін aбо пароль невірний'
         else:
@@ -57,7 +58,7 @@ def Authorization(request):
 
 def log_out(request):
     logout(request)
-    return redirect('Authorization')
+    return redirect('Main_page')
 
 
 

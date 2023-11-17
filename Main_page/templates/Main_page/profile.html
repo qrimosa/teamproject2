@@ -1,0 +1,15 @@
+{% extends 'appsettings/base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'appsettings/css/style.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+    <div class="informations">
+        <h1>Ваш профіль</h1>
+        <h3>Username: {{user.username}}</h1>
+        <h3>Email: {{user.email}}</h1>
+        <a class = 'button2' href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+{% endblock %}
