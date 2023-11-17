@@ -11,14 +11,13 @@
 </head>
 <body>
     <header>
-        <img class = "logo" src="{% static 'appsettings/images/123.png' %}" alt="">
-        <a href="{% url 'Main_page' %}">Main</a>
+        <a href="{% url 'Main_page' %}"> <img class = "logo" src="{% static 'appsettings/images/123.png' %}"></a>
         <a href="{% url 'Product_page' %}">Product</a>
         <a href="{% url 'Shopping_cart_page' %}">Cart</a>
         <a href="{% url 'Contact_page' %}">Contact</a>
         {% if user.is_authenticated %}
-            <a class = 'button' href="{% url 'Authorization_Registration' %}">Вітаємо, {{user.username}}!</a>
-            <a class = 'button2' href="{% url 'logout' %}">Logout</a>
+            <a class = 'button' href="{% url 'profile' %}">Profile</a>
+            <!-- <a class = 'button2' href="{% url 'logout' %}">Logout</a> -->
         {% else %}
             <a class = 'button' href="{% url 'Authorization_Registration' %}">Sign in</a>
         {% endif %}

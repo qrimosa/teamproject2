@@ -1,3 +1,14 @@
+.main{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    border-radius: 20px;
+}
+.img{
+    margin: 30px;
+    display: inline-block;
+}
 .content{
     display: flex; 
     justify-content: center; 
@@ -12,3 +23,4 @@
     color: white;
     font-size: 50;
 }
+
